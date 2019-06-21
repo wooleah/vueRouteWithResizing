@@ -6,11 +6,18 @@
       <li>order2</li>
       <li>order3</li>
     </ul>
+    <router-link to="/trade" v-show="windowWidth < 768">Back</router-link>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    windowWidth: {
+      type: Number
+    }
+  }
+};
 </script>
 
 <style lang="scss">

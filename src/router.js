@@ -18,12 +18,18 @@ export default new Router({
       children: [{
         path: ':walletId/orders',
         name: 'orders',
-        component: OrdersPage
+        component: OrdersPage,
+        props: true
       }, {
         path: 'spot/:market',
         name: 'market',
-        component: MarketPage
+        component: MarketPage,
+        props: true
       }]
+    },
+    {
+      path: '/trade/*',
+      redirect: '/trade'
     },
     {
       path: '/wallet',

@@ -3,6 +3,7 @@
     <h3>Market Page</h3>
     <TradeHeader/>
     <TradeConsole/>
+    <router-link to="/trade" v-show="windowWidth < 768">Back</router-link>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
   components: {
     TradeConsole,
     TradeHeader
+  },
+  props: {
+    windowWidth: {
+      type: Number
+    }
   }
 };
 </script>
